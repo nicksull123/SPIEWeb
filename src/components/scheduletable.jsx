@@ -1,3 +1,4 @@
+import prettyCron from 'prettycron';
 import React from 'react';
 import {Table, Container} from 'reactstrap';
 
@@ -19,6 +20,7 @@ class ScheduleTable extends React.Component {
                             <th>Integration Name</th>
                             <th>Setting Name</th>
                             <th>Cron</th>
+                            <th>Next Run</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,7 +37,8 @@ class ScheduleTable extends React.Component {
                 <td>{schedule.ScheduleId}</td>
                 <td>{schedule.IntegrationName}</td>
                 <td>{schedule.IntegrationSettingKey}</td>
-                <td>{schedule.CronExpression}</td>
+                <td>{prettyCron.toString(schedule.CronExpression)}</td>
+                <td>{prettyCron.getNext(schedule.CronExpression)}</td>
             </tr>
         );
     }

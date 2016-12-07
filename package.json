@@ -16,6 +16,7 @@
     "babel-preset-es2016": "^6.16.0",
     "babel-preset-es2017": "^6.16.0",
     "babel-preset-react": "^6.16.0",
+    "prettycron": "^0.10.0",
     "react": "^15.4.1",
     "react-addons-css-transition-group": "^15.4.1",
     "react-addons-transition-group": "^15.4.1",
